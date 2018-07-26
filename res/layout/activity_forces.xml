@@ -1,0 +1,191 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:textSize="16sp"
+    tools:context="gui.ForcesActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/linesspacing"
+        android:gravity="center"
+        android:layout_height="wrap_content" >
+        
+
+        <TextView
+            android:id="@+id/ForcesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:background="#EEEEEE"
+            android:text=" Siły wewnętrzne "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/mEdtextView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:text="MEd "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/mEdEditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/kNmTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kNm"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/nEdTextView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:text="NEd "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/nEdEditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/kNTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kN"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/vEdTextView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:text="VEd "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/vEdEditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/kNTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kN"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/linesspacing"
+        android:gravity="center"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+            android:id="@+id/additionalVariablesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:background="#EEEEEE"
+            android:text=" Parametry dodatkowe "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp" >
+
+        <TextView
+            android:id="@+id/symReinforcementTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rodzaj zbrojenia "
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/reinforcementSpinner"
+            android:layout_width="110dp"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:background="@drawable/spinnerstyle"
+            android:width="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_gravity="center" >
+
+        <Button
+            android:id="@+id/countButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Licz" />
+    </LinearLayout>
+
+</LinearLayout>

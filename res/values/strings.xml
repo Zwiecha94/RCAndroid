@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">RCAndroid</string>
+    <string name="app_name">RCA</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_material">MaterialActivity</string>
+    <string name="title_activity_dimensions">DimensionsActivity</string>
+    <string name="title_activity_results">ResultsActivity</string>
+    <string name="title_activity_materials">MaterialsActivity</string>
+    <string name="title_activity_forces">ForcesActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="med_">"MEd "</string>
 
 </resources>

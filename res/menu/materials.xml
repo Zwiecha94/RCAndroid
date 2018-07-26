@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.rca.MainActivity" >
+    tools:context="com.example.rca.MaterialsActivity" >
 
     <item
         android:id="@+id/action_settings"
