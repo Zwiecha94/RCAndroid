@@ -23,16 +23,17 @@ public class ForcesActivity extends Activity {
 	private Button analysisSelectButton;
 	private Button countButton;
 	private EditText mEdEditText;
+	private EditText mEkEditText;
+	private EditText mEkltEditText;
 	private EditText nEdEditText;
 	private EditText vEdEditText;
-
-
+	private EditText vEdRedEditText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forces);
-		
+
 		mEdEditText = (EditText) findViewById(R.id.mEdEditText);
 		CustomTextWatcher mEdTtextWatcher = new CustomTextWatcher() {
 			@Override
@@ -48,6 +49,36 @@ public class ForcesActivity extends Activity {
 		};
 		mEdEditText.addTextChangedListener(mEdTtextWatcher);
 		
+		mEkEditText = (EditText) findViewById(R.id.mEkEditText);
+		CustomTextWatcher mEkTtextWatcher = new CustomTextWatcher() {
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+				if (mEkEditText.getText().toString().length() == 0) {
+					forces.setmEk(0.0);
+				} else {
+					forces.setmEk(Double.parseDouble(mEkEditText.getText().toString()));
+				}
+				System.out.println("MEk= " + forces.getmEk());
+			}
+		};
+		mEkEditText.addTextChangedListener(mEkTtextWatcher);
+		
+		mEkltEditText = (EditText) findViewById(R.id.mEkltEditText);
+		CustomTextWatcher mEkltTtextWatcher = new CustomTextWatcher() {
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+				if (mEkltEditText.getText().toString().length() == 0) {
+					forces.setmEklt(0.0);
+				} else {
+					forces.setmEklt(Double.parseDouble(mEkltEditText.getText().toString()));
+				}
+				System.out.println("MEklt= " + forces.getmEklt());
+			}
+		};
+		mEkltEditText.addTextChangedListener(mEkltTtextWatcher);
+
 		nEdEditText = (EditText) findViewById(R.id.nEdEditText);
 		CustomTextWatcher nEdTtextWatcher = new CustomTextWatcher() {
 			@Override
@@ -62,7 +93,7 @@ public class ForcesActivity extends Activity {
 			}
 		};
 		nEdEditText.addTextChangedListener(nEdTtextWatcher);
-		
+
 		vEdEditText = (EditText) findViewById(R.id.vEdEditText);
 		CustomTextWatcher vEdTtextWatcher = new CustomTextWatcher() {
 			@Override
@@ -77,60 +108,92 @@ public class ForcesActivity extends Activity {
 			}
 		};
 		vEdEditText.addTextChangedListener(vEdTtextWatcher);
-				
-		Spinner spinner = (Spinner) findViewById(R.id.reinforcementSpinner);
 		
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-		        R.array.reinforcement_array, android.R.layout.simple_spinner_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		
-		spinner.setAdapter(adapter);
-		
-		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-	        public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-	               ((TextView) adapterView.getChildAt(0)).setGravity(Gravity.CENTER);
-	        }
+		vEdRedEditText = (EditText) findViewById(R.id.vEdRedEditText);
+		CustomTextWatcher vEdRedTtextWatcher = new CustomTextWatcher() {
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+				if (vEdRedEditText.getText().toString().length() == 0) {
+					forces.setvEdRed(0.0);
+				} else {
+					forces.setvEdRed(Double.parseDouble(vEdRedEditText.getText().toString()));
+				}
+				System.out.println("VEdRed= " + forces.getvEdRed());
+			}
+		};
+		vEdRedEditText.addTextChangedListener(vEdRedTtextWatcher);
+
+		Spinner reinforcementSpinner = (Spinner) findViewById(R.id.reinforcementSpinner);
+		Spinner loadSpinner = (Spinner) findViewById(R.id.typeOfLoadSpinner);
+
+		ArrayAdapter<CharSequence> reinforcementAdapter = ArrayAdapter.createFromResource(this,
+				R.array.reinforcement_array, android.R.layout.simple_spinner_item);
+		reinforcementAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+		reinforcementSpinner.setAdapter(reinforcementAdapter);
+
+		reinforcementSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+				((TextView) adapterView.getChildAt(0)).setGravity(Gravity.CENTER);
+			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?> parent) {
 				// TODO Auto-generated method stub
-				
+
 			}
-	 });
+		});
+
+		ArrayAdapter<CharSequence> loadAdapter = ArrayAdapter.createFromResource(this, R.array.typeofload_array,
+				android.R.layout.simple_spinner_item);
+		loadAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+		loadSpinner.setAdapter(loadAdapter);
+
+		loadSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+				((TextView) adapterView.getChildAt(0)).setGravity(Gravity.CENTER);
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
 		addAnalysisButtonListener();
 		addCountButtonListener();
-		
+
 	}
-	
-	
+
 	private void addCountButtonListener() {
 		countButton = (Button) findViewById(R.id.countButton);
 		countButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				
+
 			}
 		});
 	}
-	
+
 	private void addAnalysisButtonListener() {
 		analysisSelectButton = (Button) findViewById(R.id.analysisSelectButton);
 		analysisSelectButton.setText("Diagnostyka");
 		analysisSelectButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				if(analysisSelectButton.getText() == "Diagnostyka") {
+				if (analysisSelectButton.getText() == "Diagnostyka") {
 					analysisSelectButton.setText("Projektowanie");
-										
+
 				} else {
 					analysisSelectButton.setText("Diagnostyka");
-										
+
 				}
 			}
 		});
 	}
-		
-	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -151,5 +214,3 @@ public class ForcesActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 }
-
-

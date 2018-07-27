@@ -10,6 +10,7 @@ package com.example.rca;
 public final class R {
     public static final class array {
         public static final int reinforcement_array=0x7f040000;
+        public static final int typeofload_array=0x7f040001;
     }
     public static final class attr {
     }
@@ -33,32 +34,59 @@ public final class R {
     public static final class id {
         public static final int ForcesTextView=0x7f090001;
         public static final int LinearLayout1=0x7f090000;
-        public static final int action_settings=0x7f09001b;
-        public static final int additionalVariablesTextView=0x7f09000b;
-        public static final int analysisSelectButton=0x7f09000e;
-        public static final int countButton=0x7f09000f;
-        public static final int countButtonTest=0x7f09001a;
-        public static final int editText1=0x7f090015;
-        public static final int editText2=0x7f090017;
-        public static final int kNTextView1=0x7f090007;
-        public static final int kNTextView2=0x7f09000a;
-        public static final int kNmTextView=0x7f090004;
-        public static final int mEdEditText=0x7f090003;
-        public static final int mEdtextView=0x7f090002;
-        public static final int nEdEditText=0x7f090006;
-        public static final int nEdTextView=0x7f090005;
-        public static final int reinforcementSpinner=0x7f09000d;
-        public static final int symReinforcementTextView=0x7f09000c;
-        public static final int tab1=0x7f090010;
-        public static final int tab2=0x7f090011;
-        public static final int tab3=0x7f090012;
-        public static final int tab4=0x7f090013;
-        public static final int textView1=0x7f090014;
-        public static final int textView2=0x7f090016;
-        public static final int textView3=0x7f090018;
-        public static final int textView4=0x7f090019;
-        public static final int vEdEditText=0x7f090009;
-        public static final int vEdTextView=0x7f090008;
+        public static final int a1EditText=0x7f090006;
+        public static final int a1textView=0x7f090005;
+        public static final int a2EditText=0x7f09000e;
+        public static final int a2textView=0x7f09000d;
+        public static final int action_settings=0x7f090036;
+        public static final int additionalVariablesTextView=0x7f090012;
+        public static final int analysisSelectButton=0x7f090017;
+        public static final int countButton=0x7f090018;
+        public static final int countButtonTest=0x7f090035;
+        public static final int editText1=0x7f090030;
+        public static final int editText2=0x7f090032;
+        public static final int kNTextView1=0x7f090024;
+        public static final int kNTextView2=0x7f090027;
+        public static final int kNTextView3=0x7f09002a;
+        public static final int kNmTextView1=0x7f09001b;
+        public static final int kNmTextView2=0x7f09001e;
+        public static final int kNmTextView3=0x7f090021;
+        public static final int mEdEditText=0x7f09001a;
+        public static final int mEdtextView=0x7f090019;
+        public static final int mEkEditText=0x7f09001d;
+        public static final int mEkltEditText=0x7f090020;
+        public static final int mEklttextView=0x7f09001f;
+        public static final int mEktextView=0x7f09001c;
+        public static final int mTextView1=0x7f090007;
+        public static final int mTextView2=0x7f09000f;
+        public static final int mmTextView1=0x7f090004;
+        public static final int mmTextView2=0x7f09000c;
+        public static final int nEdEditText=0x7f090023;
+        public static final int nEdTextView=0x7f090022;
+        public static final int nS1EditText=0x7f090009;
+        public static final int nS1textView=0x7f090008;
+        public static final int nS2EditText=0x7f090011;
+        public static final int nS2textView=0x7f090010;
+        public static final int phiS1EditText=0x7f090003;
+        public static final int phiS1textView=0x7f090002;
+        public static final int phiS2EditText=0x7f09000b;
+        public static final int phiS2textView=0x7f09000a;
+        public static final int reinforcementSpinner=0x7f090014;
+        public static final int symReinforcementTextView=0x7f090013;
+        public static final int tab1=0x7f09002b;
+        public static final int tab2=0x7f09002c;
+        public static final int tab3=0x7f09002d;
+        public static final int tab4=0x7f09002e;
+        public static final int textView1=0x7f09002f;
+        public static final int textView2=0x7f090031;
+        public static final int textView3=0x7f090033;
+        public static final int textView4=0x7f090034;
+        public static final int typeOfLoadSpinner=0x7f090016;
+        public static final int typeOfLoadTextView=0x7f090015;
+        public static final int vEdEditText=0x7f090026;
+        public static final int vEdRedEditText=0x7f090029;
+        public static final int vEdRedTextView=0x7f090028;
+        public static final int vEdTextView=0x7f090025;
     }
     public static final class layout {
         public static final int activity_dimensions=0x7f030000;

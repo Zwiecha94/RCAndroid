@@ -4,4 +4,9 @@
         <item>symetryczne</item>
         <item>niesymetryczne</item>  
     </string-array>
+
+    <string-array name="typeofload_array">
+        <item>krótkotrwałe</item>
+        <item>długotrwałe</item>  
+    </string-array>
 </resources>

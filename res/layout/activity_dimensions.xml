@@ -1,16 +1,284 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="gui.DimensionsActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:background="@drawable/linesspacing"
+        android:gravity="center" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/ForcesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:text=" Zbrojenie podłużne "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/phiS1textView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="\u03D5s1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/phiS1EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mmTextView1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" mm"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/a1textView"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="a1 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/a1EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mTextView1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" m"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nS1textView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:text="ns1 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/nS1EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true" >
+
+        <TextView
+            android:id="@+id/phiS2textView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="\u03D5s2"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/phiS2EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mmTextView2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" mm"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/a2textView"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="a2 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/a2EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mTextView2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" m"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nS2textView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:text="ns2 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/nS2EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linesspacing"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/additionalVariablesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EEEEEE"
+            android:text=" Zbrojenie poprzeczne "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp" >
+
+        <TextView
+            android:id="@+id/symReinforcementTextView"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Rodzaj zbrojenia "
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/reinforcementSpinner"
+            android:layout_width="110dp"
+            android:layout_height="22dp"
+            android:background="@drawable/spinnerstyle"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:width="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp" >
+
+        <TextView
+            android:id="@+id/typeOfLoadTextView"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Rodzaj obciążenia "
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/typeOfLoadSpinner"
+            android:layout_width="110dp"
+            android:layout_height="22dp"
+            android:background="@drawable/spinnerstyle"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:width="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/analysisSelectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diagnostyka" />
+
+        <Button
+            android:id="@+id/countButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Licz" />
+    </LinearLayout>
+
+</LinearLayout>
