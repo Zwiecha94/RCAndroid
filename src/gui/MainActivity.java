@@ -22,15 +22,21 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
 import android.widget.Toolbar;
+import properties.Forces;
 import test.Test;
 import util.ThemeUtils;
 
 @SuppressWarnings({ "deprecation", "unused" })
 public class MainActivity extends ActivityGroup {
+	static Forces forces = new Forces();
 	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		//Forces forces = new Forces();
+		//ForcesActivity forcesActivity = new ForcesActivity(forces);
 		
 		SpannableString s = new SpannableString("Reinforced Concrete Design");
         s.setSpan(new ForegroundColorSpan(Color.parseColor("#ffffff")), 0, s.length(),
@@ -38,8 +44,6 @@ public class MainActivity extends ActivityGroup {
         
         setTitle(s);
 		
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
 
 		TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		tabHost.setup(this.getLocalActivityManager());

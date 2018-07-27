@@ -1,41 +1,82 @@
 package gui;
 
 import com.example.rca.R;
-import util.ThemeUtils;
-import android.app.ActionBar;
+
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.TextWatcher;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import properties.Forces;
-import gui.MainActivity;
+import util.CustomTextWatcher;
 
 public class ForcesActivity extends Activity {
-	Forces forces;
+	private Forces forces = MainActivity.forces;
 	private Button analysisSelectButton;
 	private Button countButton;
-	private ThemeUtils theme = new ThemeUtils();
+	private EditText mEdEditText;
+	private EditText nEdEditText;
+	private EditText vEdEditText;
+
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forces);
+		
+		mEdEditText = (EditText) findViewById(R.id.mEdEditText);
+		CustomTextWatcher mEdTtextWatcher = new CustomTextWatcher() {
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+				if (mEdEditText.getText().toString().length() == 0) {
+					forces.setmEd(0.0);
+				} else {
+					forces.setmEd(Double.parseDouble(mEdEditText.getText().toString()));
+				}
+				System.out.println("MEd= " + forces.getmEd());
+			}
+		};
+		mEdEditText.addTextChangedListener(mEdTtextWatcher);
+		
+		nEdEditText = (EditText) findViewById(R.id.nEdEditText);
+		CustomTextWatcher nEdTtextWatcher = new CustomTextWatcher() {
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+				if (nEdEditText.getText().toString().length() == 0) {
+					forces.setnEd(0.0);
+				} else {
+					forces.setnEd(Double.parseDouble(nEdEditText.getText().toString()));
+				}
+				System.out.println("NEd= " + forces.getnEd());
+			}
+		};
+		nEdEditText.addTextChangedListener(nEdTtextWatcher);
+		
+		vEdEditText = (EditText) findViewById(R.id.vEdEditText);
+		CustomTextWatcher vEdTtextWatcher = new CustomTextWatcher() {
+			@Override
+			public void afterTextChanged(Editable editable) {
+
+				if (vEdEditText.getText().toString().length() == 0) {
+					forces.setvEd(0.0);
+				} else {
+					forces.setvEd(Double.parseDouble(vEdEditText.getText().toString()));
+				}
+				System.out.println("VEd= " + forces.getvEd());
+			}
+		};
+		vEdEditText.addTextChangedListener(vEdTtextWatcher);
 				
 		Spinner spinner = (Spinner) findViewById(R.id.reinforcementSpinner);
 		
@@ -57,6 +98,7 @@ public class ForcesActivity extends Activity {
 			}
 	 });
 		addAnalysisButtonListener();
+		addCountButtonListener();
 		
 	}
 	
