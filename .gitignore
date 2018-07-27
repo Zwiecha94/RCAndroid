@@ -1,6 +1,6 @@
 .classpath
-.apk
+*.apk
 .project
 .settings
-.ap_
+*.ap_
 /bin/
