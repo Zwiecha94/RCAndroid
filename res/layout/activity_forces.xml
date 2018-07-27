@@ -36,7 +36,7 @@
 
         <TextView
             android:id="@+id/mEdtextView"
-            android:layout_width="30dp"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:text="MEd "
             android:textSize="16sp" />
@@ -46,6 +46,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -75,6 +76,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -103,6 +105,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -127,7 +130,7 @@
 
         <TextView
             android:id="@+id/nEdTextView"
-            android:layout_width="30dp"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:text="NEd "
             android:textSize="16sp" />
@@ -137,6 +140,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -158,7 +162,7 @@
 
         <TextView
             android:id="@+id/vEdTextView"
-            android:layout_width="30dp"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:text="VEd "
             android:textSize="16sp" />
@@ -168,6 +172,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -194,6 +199,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -207,6 +213,11 @@
             android:text=" kN"
             android:textSize="16sp" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp" >
     </LinearLayout>
 
     <LinearLayout
@@ -273,7 +284,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="10dp" >
 
     </LinearLayout>
 

@@ -33,8 +33,55 @@ public class ForcesActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forces);
-
+		// Przypisanie przycisków z xml
 		mEdEditText = (EditText) findViewById(R.id.mEdEditText);
+		mEkEditText = (EditText) findViewById(R.id.mEkEditText);
+		mEkltEditText = (EditText) findViewById(R.id.mEkltEditText);
+		nEdEditText = (EditText) findViewById(R.id.nEdEditText);
+		vEdEditText = (EditText) findViewById(R.id.vEdEditText);
+		vEdRedEditText = (EditText) findViewById(R.id.vEdRedEditText);
+		
+		mEdEditText.setText("0");
+		nEdEditText.setText("0");
+		vEdEditText.setText("0");
+		mEkEditText.setText("0");
+		mEkltEditText.setText("0");
+		vEdRedEditText.setText("0");
+		
+		
+		//Listenery
+		addListeners();
+	}
+
+	private void addCountButtonListener() {
+		countButton = (Button) findViewById(R.id.countButton);
+		countButton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+
+			}
+		});
+	}
+
+	private void addAnalysisButtonListener() {
+		analysisSelectButton = (Button) findViewById(R.id.analysisSelectButton);
+		analysisSelectButton.setText("Diagnostyka");
+		analysisSelectButton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				if (analysisSelectButton.getText() == "Diagnostyka") {
+					analysisSelectButton.setText("Projektowanie");
+
+				} else {
+					analysisSelectButton.setText("Diagnostyka");
+
+				}
+			}
+		});
+	}
+
+	private void addListeners() {
+		
 		CustomTextWatcher mEdTtextWatcher = new CustomTextWatcher() {
 			@Override
 			public void afterTextChanged(Editable editable) {
@@ -49,7 +96,7 @@ public class ForcesActivity extends Activity {
 		};
 		mEdEditText.addTextChangedListener(mEdTtextWatcher);
 		
-		mEkEditText = (EditText) findViewById(R.id.mEkEditText);
+		
 		CustomTextWatcher mEkTtextWatcher = new CustomTextWatcher() {
 			@Override
 			public void afterTextChanged(Editable editable) {
@@ -64,7 +111,7 @@ public class ForcesActivity extends Activity {
 		};
 		mEkEditText.addTextChangedListener(mEkTtextWatcher);
 		
-		mEkltEditText = (EditText) findViewById(R.id.mEkltEditText);
+		
 		CustomTextWatcher mEkltTtextWatcher = new CustomTextWatcher() {
 			@Override
 			public void afterTextChanged(Editable editable) {
@@ -79,7 +126,7 @@ public class ForcesActivity extends Activity {
 		};
 		mEkltEditText.addTextChangedListener(mEkltTtextWatcher);
 
-		nEdEditText = (EditText) findViewById(R.id.nEdEditText);
+		
 		CustomTextWatcher nEdTtextWatcher = new CustomTextWatcher() {
 			@Override
 			public void afterTextChanged(Editable editable) {
@@ -94,7 +141,7 @@ public class ForcesActivity extends Activity {
 		};
 		nEdEditText.addTextChangedListener(nEdTtextWatcher);
 
-		vEdEditText = (EditText) findViewById(R.id.vEdEditText);
+		
 		CustomTextWatcher vEdTtextWatcher = new CustomTextWatcher() {
 			@Override
 			public void afterTextChanged(Editable editable) {
@@ -109,7 +156,7 @@ public class ForcesActivity extends Activity {
 		};
 		vEdEditText.addTextChangedListener(vEdTtextWatcher);
 		
-		vEdRedEditText = (EditText) findViewById(R.id.vEdRedEditText);
+		
 		CustomTextWatcher vEdRedTtextWatcher = new CustomTextWatcher() {
 			@Override
 			public void afterTextChanged(Editable editable) {
@@ -165,36 +212,8 @@ public class ForcesActivity extends Activity {
 
 		addAnalysisButtonListener();
 		addCountButtonListener();
-
 	}
-
-	private void addCountButtonListener() {
-		countButton = (Button) findViewById(R.id.countButton);
-		countButton.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-
-			}
-		});
-	}
-
-	private void addAnalysisButtonListener() {
-		analysisSelectButton = (Button) findViewById(R.id.analysisSelectButton);
-		analysisSelectButton.setText("Diagnostyka");
-		analysisSelectButton.setOnClickListener(new View.OnClickListener() {
-
-			public void onClick(View v) {
-				if (analysisSelectButton.getText() == "Diagnostyka") {
-					analysisSelectButton.setText("Projektowanie");
-
-				} else {
-					analysisSelectButton.setText("Diagnostyka");
-
-				}
-			}
-		});
-	}
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

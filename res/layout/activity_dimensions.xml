@@ -34,7 +34,7 @@
 
         <TextView
             android:id="@+id/phiS1textView"
-            android:layout_width="30dp"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:text="\u03D5s1"
             android:textSize="16sp" />
@@ -44,6 +44,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -73,6 +74,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -93,6 +95,7 @@
             android:id="@+id/nS1textView"
             android:layout_width="35dp"
             android:layout_height="wrap_content"
+            android:gravity="right"
             android:text="ns1 "
             android:textSize="16sp" />
 
@@ -101,6 +104,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -118,7 +122,7 @@
 
         <TextView
             android:id="@+id/phiS2textView"
-            android:layout_width="30dp"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
             android:text="\u03D5s2"
             android:textSize="16sp" />
@@ -128,6 +132,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -157,6 +162,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -177,6 +183,7 @@
             android:id="@+id/nS2textView"
             android:layout_width="35dp"
             android:layout_height="wrap_content"
+            android:gravity="right"
             android:text="ns2 "
             android:textSize="16sp" />
 
@@ -185,6 +192,7 @@
             android:layout_width="50dp"
             android:layout_height="22dp"
             android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
             android:ems="10"
             android:inputType="numberDecimal"
             android:paddingLeft="5dp"
@@ -195,7 +203,10 @@
         </EditText>
     </LinearLayout>
 
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp" >
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -216,69 +227,192 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp" >
-
+        
         <TextView
-            android:id="@+id/symReinforcementTextView"
-            android:layout_width="130dp"
+            android:id="@+id/phiSw1textView"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
-            android:text="Rodzaj zbrojenia "
+            android:text="\u03D5sw1"
             android:textSize="16sp" />
 
-        <Spinner
-            android:id="@+id/reinforcementSpinner"
-            android:layout_width="110dp"
+        <EditText
+            android:id="@+id/phiSw1EditText"
+            android:layout_width="50dp"
             android:layout_height="22dp"
-            android:background="@drawable/spinnerstyle"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:width="25dp" />
+            android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mmTextView3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" mm"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nSw1TextView"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="nsw1 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/nSw1EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mTextView3"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" m"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/s1textView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="s1 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/s1EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+            <requestFocus />
+        </EditText>
+        
+        <TextView
+            android:id="@+id/mTextView5"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" m"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp" >
-
+        
         <TextView
-            android:id="@+id/typeOfLoadTextView"
-            android:layout_width="130dp"
+            android:id="@+id/phiSw2textView"
+            android:layout_width="35dp"
             android:layout_height="wrap_content"
-            android:text="Rodzaj obciążenia "
+            android:text="\u03D5sw2"
             android:textSize="16sp" />
 
-        <Spinner
-            android:id="@+id/typeOfLoadSpinner"
-            android:layout_width="110dp"
+        <EditText
+            android:id="@+id/phiSw2EditText"
+            android:layout_width="50dp"
             android:layout_height="22dp"
-            android:background="@drawable/spinnerstyle"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:width="25dp" />
+            android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mmTextView4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" mm"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nSw2textView"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="nsw2 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/nSw2EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/mTextView4"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" m"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/s2textView"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="s2 "
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/s2EditText"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/textinputborder"
+            android:textCursorDrawable="@null"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16sp" >
+            <requestFocus />
+        </EditText>
+        
+        <TextView
+            android:id="@+id/mTextView6"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text=" m"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:gravity="center" >
-
-        <Button
-            android:id="@+id/analysisSelectButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Diagnostyka" />
-
-        <Button
-            android:id="@+id/countButton"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Licz" />
-    </LinearLayout>
-
+    
 </LinearLayout>

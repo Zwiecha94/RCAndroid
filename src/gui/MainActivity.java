@@ -2,33 +2,31 @@ package gui;
 
 import com.example.rca.R;
 
-import android.R.string;
-import android.app.ActionBar;
-import android.app.Activity;
 import android.app.ActivityGroup;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
-import android.widget.Toolbar;
+import properties.Cement;
+import properties.Concrete;
+import properties.Dimensions;
 import properties.Forces;
-import test.Test;
-import util.ThemeUtils;
+import properties.Reinforcement;
 
 @SuppressWarnings({ "deprecation", "unused" })
 public class MainActivity extends ActivityGroup {
 	static Forces forces = new Forces();
+	static Dimensions dimenstions = new Dimensions();
+	static Concrete concrete = new Concrete();
+	static Reinforcement reinforcement = new Reinforcement();
 	
 
 	@Override
@@ -48,25 +46,23 @@ public class MainActivity extends ActivityGroup {
 		TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		tabHost.setup(this.getLocalActivityManager());
 
-		TabSpec tab1 = tabHost.newTabSpec("Si造");
+		TabSpec tab1 = tabHost.newTabSpec("Start");
 		TabSpec tab2 = tabHost.newTabSpec("Materia造");
 		TabSpec tab3 = tabHost.newTabSpec("Wymiary");
 		TabSpec tab4 = tabHost.newTabSpec("Wyniki");
 
-		tab1.setIndicator("Si造");
+		tab1.setIndicator("Start");
 		tab1.setContent(new Intent(this, ForcesActivity.class));
 		tab2.setIndicator("Materia造");
 		tab2.setContent(new Intent(this, MaterialsActivity.class));
 		tab3.setIndicator("Wymiary");
 		tab3.setContent(new Intent(this, DimensionsActivity.class));
-		/*
 		tab4.setIndicator("Wyniki");
 		tab4.setContent(new Intent(this, ResultsActivity.class));
-		 */
-		
+		/*
 		tab4.setIndicator("Test");
 		tab4.setContent(new Intent(this, TestActivity.class));
-		
+		*/
 		
 		tabHost.addTab(tab1);
 		tabHost.addTab(tab2);
