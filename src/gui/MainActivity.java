@@ -3,11 +3,16 @@ package gui;
 import com.example.rca.R;
 
 import android.R.string;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ActivityGroup;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,21 +21,23 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TabWidget;
 import android.widget.TextView;
+import android.widget.Toolbar;
 import test.Test;
+import util.ThemeUtils;
 
 @SuppressWarnings({ "deprecation", "unused" })
 public class MainActivity extends ActivityGroup {
-
-	/// wyciête z xml
-	/*
-	 * android:paddingBottom="@dimen/activity_vertical_margin"
-	 * android:paddingLeft="@dimen/activity_horizontal_margin"
-	 * android:paddingRight="@dimen/activity_horizontal_margin"
-	 * android:paddingTop="@dimen/activity_vertical_margin"
-	 */
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
+		SpannableString s = new SpannableString("Reinforced Concrete Design");
+        s.setSpan(new ForegroundColorSpan(Color.parseColor("#ffffff")), 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        
+        setTitle(s);
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -87,4 +94,6 @@ public class MainActivity extends ActivityGroup {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
 }

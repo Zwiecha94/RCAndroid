@@ -1,11 +1,17 @@
 package gui;
 
 import com.example.rca.R;
-
+import util.ThemeUtils;
+import android.app.ActionBar;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,16 +24,19 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import properties.Forces;
+import gui.MainActivity;
 
 public class ForcesActivity extends Activity {
 	Forces forces;
-
+	private Button analysisSelectButton;
+	private Button countButton;
+	private ThemeUtils theme = new ThemeUtils();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_forces);
-		
+				
 		Spinner spinner = (Spinner) findViewById(R.id.reinforcementSpinner);
 		
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -47,18 +56,34 @@ public class ForcesActivity extends Activity {
 				
 			}
 	 });
-		
+		addAnalysisButtonListener();
 		
 	}
 	
 	
 	private void addCountButtonListener() {
-		Button countButton = (Button) findViewById(R.id.countButton);
-		
+		countButton = (Button) findViewById(R.id.countButton);
 		countButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
 				
+			}
+		});
+	}
+	
+	private void addAnalysisButtonListener() {
+		analysisSelectButton = (Button) findViewById(R.id.analysisSelectButton);
+		analysisSelectButton.setText("Diagnostyka");
+		analysisSelectButton.setOnClickListener(new View.OnClickListener() {
+
+			public void onClick(View v) {
+				if(analysisSelectButton.getText() == "Diagnostyka") {
+					analysisSelectButton.setText("Projektowanie");
+										
+				} else {
+					analysisSelectButton.setText("Diagnostyka");
+										
+				}
 			}
 		});
 	}

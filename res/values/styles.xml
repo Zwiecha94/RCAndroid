@@ -2,24 +2,31 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="@android:Theme.Material.Light">
-         <item name="android:colorPrimary">#1E88E5</item>
-         <item name="android:colorPrimaryDark">#1976D2</item>
-         <item name="android:colorAccent">#ffffff</item>
-         <item name="android:colorBackground">#EEEEEE</item>
-         <item name="android:statusBarColor">#1E88E5</item>
+    <style name="DesignAppTheme" parent="@android:Theme.Material.Light">
+        <item name="android:colorPrimary">#1E88E5</item>
+        <item name="android:colorPrimaryDark">#1976D2</item>
+        <item name="android:colorAccent">#ffffff</item>
+        <item name="android:colorBackground">#EEEEEE</item>
+        <item name="android:statusBarColor">#1E88E5</item>
     </style>
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="@android:Theme.Material.Light">
-         <item name="android:colorPrimary">#1E88E5</item>
-         <item name="android:colorPrimaryDark">#1976D2</item>
-         <item name="android:colorAccent">#ffffff</item>
-         <item name="android:colorBackground">#EEEEEE</item>
-         <item name="android:statusBarColor">#1E88E5</item>
+    <style name="DiagnosisAppTheme" parent="@android:Theme.Material.Light">
+        <item name="android:colorPrimary">#7CB342</item>
+        <item name="android:colorPrimaryDark">#689F38</item>
+        <item name="android:colorAccent">#ffffff</item>
+        <item name="android:colorBackground">#EEEEEE</item>
+        <item name="android:statusBarColor">#7CB342</item>
     </style>
-
-
+    
+    <style name="AppTheme" parent="@android:Theme.Material.Light">
+        <item name="android:colorPrimary">#1E88E5</item>
+        <item name="android:colorPrimaryDark">#1976D2</item>
+        <item name="android:colorAccent">#ffffff</item>
+        <item name="android:colorBackground">#EEEEEE</item>
+        <item name="android:statusBarColor">#1E88E5</item>
+    </style>
+   
 </resources>
